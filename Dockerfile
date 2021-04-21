@@ -1,5 +1,7 @@
 FROM filebrowser/filebrowser:latest
 
-COPY database.db /database.db
+RUN touch /database.db
+
+RUN chmod 777 /database.db
 
 ENTRYPOINT [ "/filebrowser" ]
